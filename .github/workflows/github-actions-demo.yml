@@ -13,12 +13,18 @@ jobs:
     Testowanie_kodu:
        runs-on: ubuntu-latest
        steps:
-         - name: pylint install
+         - uses actions/checkout@v2
+         - name: setup
+           uses: actions/setup-python@v1
+           with:
+             python-version: 3.8
+         - name: Install dependencies
            run:
-             pip3 install -r requirements.txt
+             python -m pip install --upgrade pip
+             pip install pylint
          - name: pylint
            run:
-             pylint --rcfile=.pylintrc app.py
+             pylint app.py
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
