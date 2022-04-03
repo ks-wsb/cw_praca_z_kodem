@@ -26,7 +26,7 @@ jobs:
          - name: pylint
            run:
              pylint --exit-zero app.py
-    Budowanie_obrazu_aplikacji:
+    Docker:
        runs-on: ubuntu-latest
        steps:
          - name: docker group
