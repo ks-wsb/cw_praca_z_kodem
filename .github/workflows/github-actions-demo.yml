@@ -10,14 +10,14 @@ jobs:
          - name: wersja dockera
            run:
              docker --version 
+    Testowanie_kodu:
+       runs-on: ubuntu-latest
+       steps:
+         - name: pylint
+           run: pylint app.py
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
          - name: docker
            run:
              docker build --tag test-flask-app .
-    Testowanie_kodu:
-       runs-on: ubuntu-latest
-       steps:
-         - name: pylint
-           run: pylint app.py
