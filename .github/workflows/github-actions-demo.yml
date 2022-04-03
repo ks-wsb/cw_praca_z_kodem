@@ -17,7 +17,7 @@ jobs:
            run:
              sudo apt install python3-pip
              pip install pylint
-             pylint app.py
+             pylint /home/cw_praca_z_kodem/app.py/
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
