@@ -29,8 +29,8 @@ jobs:
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
-         -name: docker group
-         - run: 
+         - name: docker group
+           run: 
              sudo groupadd docker
              sudo usermod -aG docker $USER
              newgrp - docker
