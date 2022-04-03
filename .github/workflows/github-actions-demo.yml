@@ -15,6 +15,7 @@ jobs:
        steps:
          - name: pylint
            run:
+             sudo apt install python3-pip
              pip install pylint
              pylint app.py
     Budowanie_obrazu_aplikacji:
