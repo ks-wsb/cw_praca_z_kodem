@@ -13,8 +13,12 @@ jobs:
     Testowanie_kodu:
        runs-on: ubuntu-latest
        steps:
+         - name: pylint install
+           run:
+             pip3 install -r requirements.txt
          - name: pylint
-           run: pylint app.py
+           run:
+             pylint --rcfile=.pylintrc app.py
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
