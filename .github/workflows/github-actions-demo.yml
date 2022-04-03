@@ -33,7 +33,7 @@ jobs:
          - run: 
              sudo groupadd docker
              sudo usermod -aG docker $USER
-             newgrp - docke
+             newgrp - docker
          - uses: actions/checkout@v2
          - name: docker
            run:
