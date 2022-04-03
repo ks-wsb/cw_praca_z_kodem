@@ -29,6 +29,7 @@ jobs:
     Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
+         - uses: actions/checkout@v2
          - name: docker
            run:
              sudo snap install docker
