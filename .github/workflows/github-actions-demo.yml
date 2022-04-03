@@ -31,4 +31,5 @@ jobs:
        steps:
          - name: docker
            run:
+             sudo snap install docker
              docker build --tag test-flask-app .
