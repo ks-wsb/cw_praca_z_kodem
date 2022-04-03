@@ -1,16 +1,16 @@
 name: My first Github Workflow
 on: [push]
 jobs:	
-    Sprawdzenie_wersji:
+    Version_check:
        runs-on: ubuntu-latest
        steps:
-         - name: wersja pythona
+         - name: python version
            run: 
              python3 --version
-         - name: wersja dockera
+         - name: docker version
            run:
              docker --version 
-    Testowanie_kodu:
+    Testing_codeu:
        runs-on: ubuntu-latest
        steps:
          - uses: actions/checkout@v2
