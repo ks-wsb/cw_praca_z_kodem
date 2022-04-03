@@ -1,7 +1,7 @@
 name: My first Github Workflow
 on: [push]
 jobs:	
-    Sprawdzenie wersji:
+    Sprawdzenie_wersji:
        runs-on: ubuntu-latest
        steps:
          - name: wersja pythona
@@ -10,7 +10,7 @@ jobs:
          - name: wersja dockera
            run:
              docker --version 
-    Testowanie kodu:
+    Testowanie_kodu:
        runs-on: ubuntu-latest
        steps:
          - name: pylint
@@ -19,7 +19,7 @@ jobs:
              pip install pylint
              if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
              pylint app.py
-    Budowanie obrazu aplikacji:
+    Budowanie_obrazu_aplikacji:
        runs-on: ubuntu-latest
        steps:
          - name: docker
