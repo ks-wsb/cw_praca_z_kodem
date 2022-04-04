@@ -29,13 +29,7 @@ jobs:
     Docker:
        runs-on: ubuntu-latest
        steps:
-         - name: docker group
-           run: 
-             sudo groupadd docker
-             sudo usermod docker $USER
-             newgrp - docker
-         - uses: actions/checkout@v2
-         - name: docker
+         - uses: actions/checkout@v1
+         - name: docker build
            run:
-             sudo snap install docker
-             sudo docker build -t test-flask-app .
+             docker image build -t test-flask-app .
